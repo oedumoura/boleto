@@ -2,6 +2,7 @@ package com.example.api.pagamentoboleto.controller;
 
 import com.example.api.pagamentoboleto.dto.TransacaoDTO;
 import com.example.api.pagamentoboleto.repository.BoletoRepository;
+import com.example.api.pagamentoboleto.request.BancoAq4request;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.ResponseEntity;
@@ -17,6 +18,9 @@ public class BoletoController {
 
     @Autowired
     private BoletoRepository repository;
+
+    @Autowired
+    private BancoAq4request request;
 
     @PostMapping(path = "/boleto")
     public ResponseEntity<TransacaoDTO> boleto(@RequestBody TransacaoDTO transacaoDTO){

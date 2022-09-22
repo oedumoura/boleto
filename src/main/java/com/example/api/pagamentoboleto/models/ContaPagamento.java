@@ -1,9 +1,14 @@
-package com.example.api.pagamentoboleto.dto;
+package com.example.api.pagamentoboleto.models;
 
 import lombok.Data;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 @Data
-public class ContaPagamentoDto {
+@Entity
+public class ContaPagamento {
+    @Id
     private long id;
     private String numeroConta;
     private String agencia;
@@ -11,5 +16,4 @@ public class ContaPagamentoDto {
     private String nomeCliente;
     private double saldo;
     private boolean status;
-
 }
