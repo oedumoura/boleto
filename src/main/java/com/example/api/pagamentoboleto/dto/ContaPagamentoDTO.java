@@ -2,8 +2,11 @@ package com.example.api.pagamentoboleto.dto;
 
 import lombok.Data;
 
+import java.util.List;
+
 @Data
-public class ContaPagamentoDto {
+public class ContaPagamentoDTO {
+
     private long id;
     private String numeroConta;
     private String agencia;
@@ -11,5 +14,5 @@ public class ContaPagamentoDto {
     private String nomeCliente;
     private double saldo;
     private boolean status;
-
+    private List<TransacaoDTO> transcoes;
 }
