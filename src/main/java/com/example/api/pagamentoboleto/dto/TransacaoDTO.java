@@ -10,6 +10,8 @@ public class TransacaoDTO {
     private long idTransacao;
     private long idConta;
     private String nomeConta;
+    private long idContaDestino;
+    private String nomeContaDestino;
     private String data;
     private double valor;
 

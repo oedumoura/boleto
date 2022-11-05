@@ -10,7 +10,12 @@ spring:
     console:
       enabled: true
       path: /h2-console
+  application:
+    name: payment-api
 server:
   port: 8082
-
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka
 
